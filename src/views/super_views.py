@@ -16,6 +16,12 @@ class SuperViews():
 
 HELP_TEXT = """ [HELP]
 Commands:
-/trihard
+/help - You just used it
+/trihard - I'm a bot after all (Saul)
+/niggroMode - For when you need a black friend
+/poll [que]? [ans1] [ans2] ... - Creates a poll
+/endpoll - Guess
+/Overwatch - Are you Hyped? I am
+/countdown - I told you I'm hyped
 """
 
