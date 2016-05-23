@@ -25,7 +25,7 @@ class BasicViews():
             ('^/poll\s(?P<question>.+)\?\s(?P<options>.*)$', self.start_poll),
             ('^/vote\s(?P<number>\d)$', self.vote),
             ('^/endpoll$', self.end_poll),
-            ('^/niggroMode', self.niggro_mode),
+            ('^/niggroMode$', self.niggro_mode),
             ('.*(overwatch)|(OVERWATCH)|(Overwatch).*$', self.overwatch_hype),
         ]
 
