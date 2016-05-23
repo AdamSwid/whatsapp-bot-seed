@@ -66,7 +66,7 @@ class BasicViews():
     
     def niggro_mode(self, message, match):
         MESSAGE = NIGGRO_MODE[randint(0, len(NIGGRO_MODE) -1)]
-        self.send_image('https://pbs.twimg.com/media/Bm-Aaf-CEAAHA-P.jpg:large', message.getFrom())
+        self.send_image('https://pbs.twimg.com/media/Bm-Aaf-CEAAHA-P.jpg', message.getFrom())
         self.send_text(MESSAGE, message.getFrom())
         
     def start_poll(self, message, match):
