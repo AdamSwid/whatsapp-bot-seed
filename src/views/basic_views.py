@@ -9,7 +9,7 @@ BOT_SAUL_DICT = ('fangay', 'apple sucks', 'overwatch arcade game', 'hearthstone 
 
 NIGGRO_MODE = ('Bring dem fuckin rockets to dat ass', 'Bend that bitch like beckham', 'I dont fuck around',
                'Im de president of hittin dat ass', 'Never hand a dick to someone with parkinsons', 
-               'Imma fuck you ass up');
+               'Imma fuck you ass up')
 
 
 # Basic regex routes
@@ -64,7 +64,7 @@ class BasicViews():
         self.send_image('http://assets.vg247.com/current/2015/09/overwatch.jpg', message.getFrom())
         self.send_text('OVERWATCH HYPEEE!', message.getFrom())
     
-    def niggro_mode
+    def niggro_mode(self, message, match):
         MESSAGE = NIGGRO_MODE[randint(0, len(NIGGRO_MODE) -1)]
         self.send_image('https://pbs.twimg.com/media/Bm-Aaf-CEAAHA-P.jpg:large', message.getFrom())
         self.send_text(MESSAGE, message.getFrom))
