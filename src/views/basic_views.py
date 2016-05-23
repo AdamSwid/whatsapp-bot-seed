@@ -7,7 +7,7 @@ from views.media import MediaViews
 BOT_SAUL_DICT = ('fangay', 'apple sucks', 'overwatch arcade game', 'hearthstone pooping game',
                  'game of thrones is overrated', 'blizzard is bad')
 
-NIGGRO_MODE = ('Bring dem fuckin rockets to dat ass', 'Bend that bitch like beckham', 'I dont fuck around',
+NEGRO_MODE = ('Bring dem fuckin rockets to dat ass', 'Bend that bitch like beckham', 'I dont fuck around',
                'Im de president of hittin dat ass', 'Never hand a dick to someone with parkinsons', 
                'Imma fuck you ass up')
 
@@ -25,7 +25,7 @@ class BasicViews():
             ('^/poll\s(?P<question>.+)\?\s(?P<options>.*)$', self.start_poll),
             ('^/vote\s(?P<number>\d)$', self.vote),
             ('^/endpoll$', self.end_poll),
-            ('^/niggroMode$', self.niggro_mode),
+            ('^/goNegro', self.negro_mode),
             ('.*(overwatch)|(OVERWATCH)|(Overwatch).*$', self.overwatch_hype),
         ]
 
@@ -64,9 +64,10 @@ class BasicViews():
         self.send_image('http://assets.vg247.com/current/2015/09/overwatch.jpg', message.getFrom())
         self.send_text('OVERWATCH HYPEEE!', message.getFrom())
     
-    def niggro_mode(self, message, match):
-        MESSAGE = NIGGRO_MODE[randint(0, len(NIGGRO_MODE) -1)]
-        self.send_image('https://pbs.twimg.com/media/Bm-Aaf-CEAAHA-P.jpg', message.getFrom())
+    def negro_mode(self, message, match):
+        MESSAGE = NEGRO_MODE[randint(0, len(NEGRO_MODE) -1)]
+        if randint(0,9) == 1:
+            self.send_image('https://pbs.twimg.com/media/Bm-Aaf-CEAAHA-P.jpg', message.getFrom())
         self.send_text(MESSAGE, message.getFrom())
         
     def start_poll(self, message, match):
